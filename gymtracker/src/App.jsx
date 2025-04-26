@@ -1,11 +1,12 @@
 import './assets/tailwind.css'
 import Sidebar from './components/Sidebar'
+import Exercices from './pages/Exercices'
 
 function App() {
 
   return (
     <div>
-      <Sidebar />
+      <Exercices />
     </div>
   )
 }
