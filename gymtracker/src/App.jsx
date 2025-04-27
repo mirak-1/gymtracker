@@ -5,7 +5,7 @@ import Exercices from './pages/Exercices'
 function App() {
 
   return (
-    <div>
+    <div className='w-full h-screen'>
       <Exercices />
     </div>
   )
