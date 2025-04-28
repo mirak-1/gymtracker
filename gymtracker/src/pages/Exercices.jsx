@@ -1,11 +1,12 @@
 import Exercice from "../components/Exercice";
 import Sidebar from "../components/Sidebar";
 import SearchBar from "../components/Searchbar";
+import { exercises } from "../data/exercises";
 
 function Exercices() {
     return (
         <div className="flex">
-            <div className="w-3xs mr-2">
+            <div className="w-3xs mr-5">
                 <Sidebar />
             </div>
             <div className="flex-col">
@@ -13,21 +14,11 @@ function Exercices() {
                     <SearchBar />
                 </div>
                 <div className="grid grid-cols-3 mt-10 gap-4">
-                    <div className="">
-                        <Exercice text="lorem ipsum" />
-                    </div>
-                    <div className="">
-                        <Exercice text="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum" />
-                    </div>
-                    <div className="">
-                        <Exercice />
-                    </div>
-                    <div className="">
-                        <Exercice />
-                    </div>
-                    <div className="">
-                        <Exercice />
-                    </div>
+                    {exercises.map((exercise) => (
+                        <div key={exercise.id}>
+                            <Exercice {...exercise} />
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
